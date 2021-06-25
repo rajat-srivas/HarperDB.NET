@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using HarperNetClient.models;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -13,7 +12,6 @@ namespace HarperNetClient
         private RestClient _client;
         private HarperDbConfiguration _harperDbConfig;
         private string Schema_Table = "";
-        private ILogger<HarperClient> _logger;
         public HarperClient(HarperDbConfiguration config)
         {
             _harperDbConfig = config;
@@ -36,7 +34,11 @@ namespace HarperNetClient
             return request;
         }
 
-
+        /// <summary>
+        /// Create New HarperDB Schema, accepts a string for the Schema Name
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
         public IRestResponse CreateSchema(string schema)
         {
             try
@@ -62,6 +64,13 @@ namespace HarperNetClient
             }
         }
 
+        /// <summary>
+        /// Create new Table, accepts string field for Table name and schema. Hash attribute is optional with default value as id
+        /// </summary>
+        /// <param name="table"></param>
+        /// <param name="schema"></param>
+        /// <param name="hashAttribute"></param>
+        /// <returns></returns>
         public IRestResponse CreateTable(string table, string schema, string hashAttribute = "id")
         {
             try
@@ -90,6 +99,12 @@ namespace HarperNetClient
             }
         }
 
+        /// <summary>
+        /// Create Generic T record in HarperDb
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="itemToCreate"></param>
+        /// <returns></returns>
         public IRestResponse CreateRecord<T>(T itemToCreate)
         {
             try
@@ -120,6 +135,12 @@ namespace HarperNetClient
             }
         }
 
+        /// <summary>
+        /// Create Bulk record using CSV file
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="csvFilePath"></param>
+        /// <returns></returns>
         public IRestResponse CreateBulkRecord<T>(string csvFilePath)
         {
             try
@@ -149,7 +170,11 @@ namespace HarperNetClient
         }
 
 
-
+        /// <summary>
+        /// Get item by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IRestResponse GetById(string id)
         {
             try
@@ -176,6 +201,11 @@ namespace HarperNetClient
             }
         }
 
+        /// <summary>
+        /// Execute any query, accepts string query as the param
+        /// </summary>
+        /// <param name="sqlQuery"></param>
+        /// <returns></returns>
         public IRestResponse ExecuteQuery(string sqlQuery)
         {
             try
@@ -200,6 +230,12 @@ namespace HarperNetClient
             }
         }
 
+        /// <summary>
+        /// Update generic record T 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="itemToUpdate"></param>
+        /// <returns></returns>
         public IRestResponse UpdateRecord<T>(T itemToUpdate)
         {
             try
