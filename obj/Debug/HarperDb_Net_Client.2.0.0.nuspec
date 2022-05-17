@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>HarperDb_Net_Client</id>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <authors>Rajat Srivastava</authors>
     <description>Package to integrate .Net Core based app with HarperDB.</description>
     <dependencies>

@@ -13,8 +13,21 @@ namespace HarperNetClient.models
         [JsonProperty("operation")]
         public string Operation { get; set; }
 
+        [JsonProperty("action")]
+        public string Action { get; set; }
+
+        [JsonProperty("data")]
+        public string Data { get; set; }
+
+        [JsonProperty("csv_url ")]
+        public string Csv_URL { get; set; }
+
+
         [JsonProperty("schema")]
         public string Schema { get; set; }
+
+        [JsonProperty("attribute")]
+        public string Attribute { get; set; }
 
         [JsonProperty("table")]
         public string Table { get; set; }
