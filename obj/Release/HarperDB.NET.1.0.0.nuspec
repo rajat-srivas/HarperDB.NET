@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HarperDB.NET</id>
+    <version>1.0.0</version>
+    <authors>HarperDB</authors>
+    <description>Package to integrate .Net Core based app with HarperDB.</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="5.0.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.11.7" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\rasrivas\Source\Repos\HarperDbNuget\bin\Release\netcoreapp3.1\HarperNetClient.runtimeconfig.json" target="lib\netcoreapp3.1\HarperNetClient.runtimeconfig.json" />
+    <file src="C:\Users\rasrivas\Source\Repos\HarperDbNuget\bin\Release\netcoreapp3.1\HarperNetClient.dll" target="lib\netcoreapp3.1\HarperNetClient.dll" />
+  </files>
+</package>

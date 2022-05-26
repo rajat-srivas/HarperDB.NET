@@ -32,3 +32,4 @@ C:\Users\rasrivas\source\repos\HarperDbNuget\obj\Debug\netcoreapp3.1\HarperNetCl
 C:\Users\rasrivas\source\repos\HarperDbNuget\obj\Debug\netcoreapp3.1\HarperNetClient.dll
 C:\Users\rasrivas\source\repos\HarperDbNuget\obj\Debug\netcoreapp3.1\HarperNetClient.pdb
 C:\Users\rasrivas\source\repos\HarperDbNuget\obj\Debug\netcoreapp3.1\HarperNetClient.genruntimeconfig.cache
+C:\Users\rasrivas\Source\Repos\HarperDbNuget\obj\Debug\netcoreapp3.1\HarperNetClient.csproj.AssemblyReference.cache
